@@ -1,0 +1,58 @@
+.login {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+
+    &__half {
+        flex: 1 1 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+
+        &--left {
+            background-color: #007bff;
+        }
+
+        &--right {
+            background-color: #f0f0f0;
+            color: #fff;
+        }
+    }
+
+    &__content {
+        max-width: 300px;
+        text-align: center;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        p-floatlabel {
+            input {
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+    .login__half {
+        flex: 1 1 100%;
+
+        &--left {
+            display: none;
+        }
+    }
+}
+
+p-button {
+    &::ng-deep {
+        button {
+            width: 100%;
+        }
+    }
+}

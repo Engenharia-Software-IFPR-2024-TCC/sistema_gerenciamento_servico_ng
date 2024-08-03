@@ -1,0 +1,37 @@
+<div class="login">
+    <div class="login__half login__half--left">
+        <div class="login__content">
+
+        </div>
+    </div>
+    <div class="login__half login__half--right">
+        <div class="login__content">
+            <form [formGroup]="loginFg" class="login__form">
+                <p-floatLabel>
+                    <input
+                        formControlName="username"
+                        pInputText
+                        id="username" />
+                    <label for="username">Usuário</label>
+                </p-floatLabel>
+
+                <p-floatLabel>
+                    <p-password
+                        formControlName="password"
+                        [toggleMask]="true"
+                        promptLabel="Escolha uma senha"
+                        weakLabel="Senha Fraca"
+                        mediumLabel="Senha Média"
+                        strongLabel="Senha Forte"/>
+                    <label for="password">Senha</label>
+                </p-floatLabel>
+
+                <p-button
+                    label="Acessar"
+                    icon="pi pi-check"
+                    [loading]="loading()"
+                    (onClick)="doUserLogin()" />
+            </form>
+        </div>
+    </div>
+</div>
