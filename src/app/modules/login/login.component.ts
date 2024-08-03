@@ -33,7 +33,6 @@ export class LoginComponent {
 
     doUserLogin(): void {
         if (this.loading()) return;
-
         if (!this.loginFg.valid) {
             this.loginFg.markAllAsTouched();
             this.toastService.error("", "Preencha todos os campos obrigatórios");
