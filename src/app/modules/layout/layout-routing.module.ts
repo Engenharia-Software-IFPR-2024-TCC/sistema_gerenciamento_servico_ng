@@ -11,6 +11,10 @@ const routes: Routes = [
                 (m) => m.LoginModule,
             ),
     },
+    {
+        path: "**",
+        redirectTo: "app",
+    }
 ];
 
 @NgModule({
